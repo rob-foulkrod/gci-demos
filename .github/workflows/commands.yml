@@ -14,3 +14,8 @@ jobs:
         
       - name: Get color
         run: echo "The selected color is ${{ steps.random-color-generator.outputs.SELECTED_COLOR }}"
+        
+      - name: start masking
+        run: |
+          echo "::add-mask::secret"
+          echo "We will hide this secret word"
