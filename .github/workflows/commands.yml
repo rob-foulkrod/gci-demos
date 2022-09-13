@@ -1,0 +1,17 @@
+
+# Controls when the workflow will run
+on:
+  workflow_dispatch:
+
+
+jobs:
+
+  demo:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Set selected color
+        run: echo '::set-output name=SELECTED_COLOR::green'
+        id: random-color-generator
+        
+      - name: Get color
+        run: echo "The selected color is ${{ steps.random-color-generator.outputs.SELECTED_COLOR }}"
