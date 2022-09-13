@@ -17,5 +17,7 @@ jobs:
         
       - name: start masking
         run: |
-          echo "::add-mask::secret"
-          echo "We will hide this secret word"
+          echo "::add-mask::$magic"
+          echo "We will hide this $magic word"
+        env:
+          magic: secret
