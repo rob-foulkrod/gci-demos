@@ -8,5 +8,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - env:
+          MESSAGE: "So sad. Better luck next time!"
+        run: echo $MESSAGE
+        
+  run_if_success:
+    if: ${{ github.event.client_payload.passed }}
+    runs-on: ubuntu-latest
+    steps:
+      - env:
           MESSAGE: ${{ github.event.client_payload.message }}
         run: echo $MESSAGE
