@@ -13,6 +13,6 @@ jobs:
         
   run_if_success:
     if: ${{ github.event.client_payload.passed }}
-    uses: rob-foulkrod/gcd-demos./.github/workflows/congratulations.yml@main
+    uses: rob-foulkrod/gci-demos./.github/workflows/congratulations.yml@main
     with:
       message: ${{ github.event.client_payload.message }}
