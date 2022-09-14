@@ -1,5 +1,9 @@
 on:
   workflow_call:
+    inputs:
+      message:
+        required: true
+        type: string
 jobs:
   print_congratulations:
     runs-on: ubuntu-latest
@@ -17,3 +21,7 @@ jobs:
                          |___/ 
         EOF
         # https://ascii.co.uk/art/congrats
+    - name: print_message
+      run: echo '$message'
+      env:
+        message: ${{ inputs.message }}
