@@ -1,0 +1,12 @@
+@token = abcd
+
+POST https://api.github.com/repos/rob-foulkrod/gci-demos/dispatches
+Accept: application/vnd.github+json
+Authorization: Token {{token}}
+
+{"event_type":"test_completed",
+  "client_payload":{
+    "passed": true,
+    "message": "We did it!"
+    }
+}
