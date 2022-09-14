@@ -4,7 +4,8 @@ jobs:
   print_congratulations:
     runs-on: ubuntu-latest
     steps:
-    - run: |
+    - name: congrats
+      run: |
         cat << "EOF"
                                          _       
                                         | |      
