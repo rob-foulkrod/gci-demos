@@ -1,5 +1,5 @@
 on:
-  workflow_dispatch:
+  workflow_call:
 jobs:
   print_congratulations:
     runs-on: ubuntu-latest
