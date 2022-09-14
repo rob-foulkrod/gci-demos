@@ -13,6 +13,8 @@ jobs:
         
   run_if_success:
     if: ${{ github.event.client_payload.passed }}
-    uses: rob-foulkrod/gci-demos/.github/workflows/congratulations.yml@main
-    with:
-      message: ${{ github.event.client_payload.message }}
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo $MESSAGE
+        env:
+            MESSAGE: ${{ github.event.client_payload.message }}
