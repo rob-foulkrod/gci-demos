@@ -15,11 +15,10 @@ jobs:
     if: ${{ github.event.client_payload.passed }}
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
       - env:
           MESSAGE: ${{ github.event.client_payload.message }}
         
 
         run: echo $MESSAGE
 
-      - uses: ./.github/workflows/congratulations.yml
+      - uses: rob-foulkrod/gcd-demos./.github/workflows/congratulations.yml@main
